@@ -141,8 +141,9 @@ Vagrant.configure(2) do |config|
 
 
   # Download and compile bpftools
-  #config.vm.provision "shell", name: "Download and compile bpftools", privileged: false, inline: $setup_bpftools
+  config.vm.provision "shell", name: "Download and compile bpftools", privileged: false, inline: $setup_bpftools
 
+  # Clone and compile ebpf-tools
   config.vm.provision "shell", name: "Compile ebpf-tools", privileged: false, inline: <<-SHELL
    source $HOME/.ghcup/env
    git clone https://github.com/kfl/ebpf-tools.git
