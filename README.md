@@ -2,7 +2,7 @@ eBPF Experimental Code
 ======================
 
 This repository (will eventually) contains some short guides and small
-snippets of eBPF and code interacting with eBPF,
+snippets of eBPF and code interacting with eBPF.
 
 
 Files
@@ -17,7 +17,8 @@ Files
    through the `Vagrant.configure` part and comment out what you are
    not interested in.
    
- * `samples/socketfilter.c` is a short sample intended to illustrate:
+ * [`samples/socketfilter.c`](./samples/socketfilter.c) is a short
+   sample intended to illustrate:
     
     1. a lightweight to load some eBPF bytecode into the kernel,
        attach it to a socket, and trigger it so that the bytecode
@@ -27,8 +28,9 @@ Files
    
     Uses `bpf_insn.h`.
     
- * `bpf_insn.h` eBPF instruction mini library in the form of some C
-   macros for writing eBPF bytecode almost like an assembler.
+ * [`samples/bpf_insn.h`](./samples/bpf_insn.h) eBPF instruction mini
+   DSL library. A set of C macros for writing eBPF bytecode in an
+   assembler-like fashion.
  
    Copied from the Linux source tree: `linux/samples/bpf/bpf_insn.h`,
    see license in the file.
